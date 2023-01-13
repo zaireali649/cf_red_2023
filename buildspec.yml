@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Starting build      
+      - aws cloudformation create-stack --stack-name "red-luit-stack" --template-body file://red_cf_template.json
+artifacts:
+  files:
+    - '**/*'
