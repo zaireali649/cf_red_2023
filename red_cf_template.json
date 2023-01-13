@@ -1,0 +1,23 @@
+{
+    "Resources": {
+        "S3Bucket001": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+            }
+        },
+		"S3Bucket007": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+            }
+        },
+		"MyEC2Instance001" : {
+		   "Type" : "AWS::EC2::Instance",
+		   "Properties" : {
+			  "ImageId" : "ami-0b5eea76982371e91",
+			  "KeyName" : "private-ec2",
+			  "InstanceType" : "t2.micro",
+			  "SecurityGroupIds" : ["sg-0197b8159a5d886f8"]
+		   }
+		}
+    }
+}
